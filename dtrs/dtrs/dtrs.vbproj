@@ -72,20 +72,53 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database3SADDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database3SADDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDTRForm.Designer.vb">
+      <DependentUpon>EmployeeDTRForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDTRForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainAdminFormAdmins.Designer.vb">
+      <DependentUpon>MainAdminFormAdmins.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainAdminFormAdmins.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainAdminFormPositions.Designer.vb">
+      <DependentUpon>MainAdminFormPositions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainAdminFormPositions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainAdminFormBlank.Designer.vb">
+      <DependentUpon>MainAdminFormBlank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainAdminFormBlank.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainAdminFormEmployees.Designer.vb">
+      <DependentUpon>MainAdminFormEmployees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainAdminFormEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MainDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MainDataSet.vb">
-      <DependentUpon>MainDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -104,8 +137,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EmployeeDTRForm.resx">
+      <DependentUpon>EmployeeDTRForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAdminFormAdmins.resx">
+      <DependentUpon>MainAdminFormAdmins.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAdminFormBlank.resx">
+      <DependentUpon>MainAdminFormBlank.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAdminFormEmployees.resx">
+      <DependentUpon>MainAdminFormEmployees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAdminFormPositions.resx">
+      <DependentUpon>MainAdminFormPositions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -115,16 +166,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MainDataSet.xsc">
-      <DependentUpon>MainDataSet.xsd</DependentUpon>
+    <None Include="Database3SADDataSet.xsc">
+      <DependentUpon>Database3SADDataSet.xsd</DependentUpon>
     </None>
-    <None Include="MainDataSet.xsd">
+    <None Include="Database3SADDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MainDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>Database3SADDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="MainDataSet.xss">
-      <DependentUpon>MainDataSet.xsd</DependentUpon>
+    <None Include="Database3SADDataSet.xss">
+      <DependentUpon>Database3SADDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -141,6 +192,9 @@
     <Content Include="Database3SAD.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
