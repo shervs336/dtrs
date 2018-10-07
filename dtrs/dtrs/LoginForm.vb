@@ -1,30 +1,41 @@
 ﻿Imports System.ComponentModel
-Imports System.Data.OleDb
 
 Public Class LoginForm
-    Dim con As New OleDbConnection
+    Private Access As New DBControl
+    Dim ErrorBag As Boolean = False
+
+    Private Sub ValidateInputs()
+        For Each ctrl In Me.Controls.OfType(Of TextBox)
+            If ctrl.Text = String.Empty Then
+                ctrl.BackColor = Color.Red
+                ErrorBag = True
+            End If
+            Access.AddParam(ctrl.AccessibleName, ctrl.Text)
+        Next
+    End Sub
+
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Database3SAD.accdb"
+        ValidateInputs()
 
-        Dim pass As String
-
-        Dim cmd As New OleDbCommand("Select * From tbl_admins Where Username='" & txtUsername.Text & "' and Password='" & txtPassword.Text & "'", con)
-        con.Open()
-
-        Try
-            pass = cmd.ExecuteScalar().ToString
-        Catch
-            MsgBox("Incorrect Username and Password!", MsgBoxStyle.Exclamation)
-        End Try
-
-        con.Close()
-
-        If (pass) Then
-            MsgBox("You are now logged in ")
-            MainAdminFormBlank.Show()
-            Me.Hide()
+        If ErrorBag Then
+            MsgBox("There is an error with your inputs")
+            Exit Sub
         End If
+
+        Access.ExecQuery("Select * From tbl_admins WHERE username=@username AND password=@password")
+
+        If Not String.IsNullOrEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
+
+        ' CHECK IF QUERY HAS COUNT
+        If Access.RecordCount > 0 Then
+            Me.Hide()
+            MainAdminFormBlank.Show()
+            Exit Sub
+        End If
+
+        MsgBox("Incorrect username and password")
+
 
     End Sub
 
@@ -39,5 +50,13 @@ Public Class LoginForm
     Private Sub ClosingToMenu()
         Me.Hide()
         MainForm.Show()
+    End Sub
+
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+
+    End Sub
+
+    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
+
     End Sub
 End Class

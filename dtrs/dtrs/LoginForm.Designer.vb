@@ -53,6 +53,7 @@ Partial Class LoginForm
         '
         'txtUsername
         '
+        Me.txtUsername.AccessibleName = "username"
         Me.txtUsername.Location = New System.Drawing.Point(442, 135)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(305, 20)
@@ -60,8 +61,10 @@ Partial Class LoginForm
         '
         'txtPassword
         '
+        Me.txtPassword.AccessibleName = "password"
         Me.txtPassword.Location = New System.Drawing.Point(442, 185)
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(305, 20)
         Me.txtPassword.TabIndex = 3
         '
