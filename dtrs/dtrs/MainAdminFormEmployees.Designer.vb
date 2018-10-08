@@ -69,8 +69,8 @@ Partial Class MainAdminFormEmployees
         Me.PhoneTextBox = New System.Windows.Forms.TextBox()
         Me.GenderTextBox = New System.Windows.Forms.TextBox()
         Me.AgeTextBox = New System.Windows.Forms.TextBox()
-        Me.PositionTextBox = New System.Windows.Forms.TextBox()
         Me.Date_HiredDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.PositionComboBox = New System.Windows.Forms.ComboBox()
         IDLabel = New System.Windows.Forms.Label()
         Full_NameLabel = New System.Windows.Forms.Label()
         AddressLabel = New System.Windows.Forms.Label()
@@ -434,14 +434,6 @@ Partial Class MainAdminFormEmployees
         Me.AgeTextBox.Size = New System.Drawing.Size(200, 20)
         Me.AgeTextBox.TabIndex = 14
         '
-        'PositionTextBox
-        '
-        Me.PositionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_employeesBindingSource, "Position", True))
-        Me.PositionTextBox.Location = New System.Drawing.Point(79, 221)
-        Me.PositionTextBox.Name = "PositionTextBox"
-        Me.PositionTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.PositionTextBox.TabIndex = 16
-        '
         'Date_HiredDateTimePicker
         '
         Me.Date_HiredDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Tbl_employeesBindingSource, "Date_Hired", True))
@@ -450,11 +442,20 @@ Partial Class MainAdminFormEmployees
         Me.Date_HiredDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.Date_HiredDateTimePicker.TabIndex = 18
         '
+        'PositionComboBox
+        '
+        Me.PositionComboBox.FormattingEnabled = True
+        Me.PositionComboBox.Location = New System.Drawing.Point(79, 221)
+        Me.PositionComboBox.Name = "PositionComboBox"
+        Me.PositionComboBox.Size = New System.Drawing.Size(200, 21)
+        Me.PositionComboBox.TabIndex = 19
+        '
         'MainAdminFormEmployees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(808, 450)
+        Me.Controls.Add(Me.PositionComboBox)
         Me.Controls.Add(IDLabel)
         Me.Controls.Add(Me.IDTextBox)
         Me.Controls.Add(Full_NameLabel)
@@ -468,7 +469,6 @@ Partial Class MainAdminFormEmployees
         Me.Controls.Add(AgeLabel)
         Me.Controls.Add(Me.AgeTextBox)
         Me.Controls.Add(PositionLabel)
-        Me.Controls.Add(Me.PositionTextBox)
         Me.Controls.Add(Date_HiredLabel)
         Me.Controls.Add(Me.Date_HiredDateTimePicker)
         Me.Controls.Add(Me.Tbl_employeesDataGridView)
@@ -527,6 +527,6 @@ Partial Class MainAdminFormEmployees
     Friend WithEvents PhoneTextBox As TextBox
     Friend WithEvents GenderTextBox As TextBox
     Friend WithEvents AgeTextBox As TextBox
-    Friend WithEvents PositionTextBox As TextBox
     Friend WithEvents Date_HiredDateTimePicker As DateTimePicker
+    Friend WithEvents PositionComboBox As ComboBox
 End Class

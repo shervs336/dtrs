@@ -88,5 +88,4 @@ Public Class EmployeeDTRForm
             Exit Sub
         End Try
     End Sub
-
 End Class
