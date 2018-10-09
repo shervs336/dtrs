@@ -11,4 +11,8 @@
         Me.Hide()
         MainAdminFormAdmins.Show()
     End Sub
+
+    Private Sub MainAdminFormBlank_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        AdminNameLabel.Text = "Hi! - " & LoggedUser.LoggedUser("Full_Name")
+    End Sub
 End Class

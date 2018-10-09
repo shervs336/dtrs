@@ -49,16 +49,15 @@ Public Class EmployeeDTRForm
 
         Access.ExecQuery("Select * From tbl_employee_login WHERE employee_id=@id AND shift_date=@shift_date")
 
-        Access.AddParam("Employee_ID", 2018001)
         Access.AddParam(Transaction, DateNow.ToString("M/d/yyyy hh:mm:ss tt"))
         Access.AddParam("Shift_Date", DateNow.ToString("M/d/yyyy"))
+        Access.AddParam("Employee_ID", Convert.ToInt32(EmployeeID.Text))
 
         If Access.RecordCount = 0 Then
-            Access.ExecQuery("Insert Into tbl_employee_login([Employee_ID], [" & Transaction & "], [Shift_Date]) Values(@Employee_ID, @" & Transaction & ", @Shift_Date)")
+            Access.ExecQuery("Insert Into tbl_employee_login([" & Transaction & "], [Shift_Date], [Employee_ID]) Values( @" & Transaction & ",@Shift_Date, @Employee_ID)")
         Else
-            'Access.ExecQuery("Update tbl_employee_login Set [" & Transaction & "] = ? WHERE [Employee_ID] = ? AND [Shift_Date] = ?")
             Dim NewDate = DateNow.ToString("M/d/yyyy hh:mm:ss tt")
-            Access.ExecQuery("Update tbl_employee_login Set [" & Transaction & "] = '" & NewDate & "'")
+            Access.ExecQuery("Update tbl_employee_login Set [" & Transaction & "] = @" & Transaction & " Where Shift_Date=@Shift_Date And Employee_ID=@Employee_ID")
         End If
 
         Access.AddParam("employee_id", Convert.ToInt32(EmployeeID.Text))
@@ -67,6 +66,8 @@ Public Class EmployeeDTRForm
         If Access.RecordCount > 0 Then
             DGEmployeeDTR.DataSource = Access.DBDT
         End If
+
+        ComputeHours(DateNow)
 
     End Sub
 
@@ -87,5 +88,21 @@ Public Class EmployeeDTRForm
             MsgBox(ex.Message)
             Exit Sub
         End Try
+    End Sub
+
+    Private Sub ComputeHours(DateNow As Date)
+        Access.AddParam("employee_id", Convert.ToInt32(EmployeeID.Text))
+        Access.AddParam("shift_date", DateNow.ToString("M/d/yyyy"))
+
+        Access.ExecQuery("Select * From tbl_employee_login WHERE employee_id=@id AND shift_date=@shift_date AND time_in IS NOT NULL and time_out IS NOT NULL")
+
+        If Access.RecordCount > 0 Then
+
+            Dim record = Access.DBDT.Rows(0)
+
+            'Access.Ex
+
+        End If
+
     End Sub
 End Class

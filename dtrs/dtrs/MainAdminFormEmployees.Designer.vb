@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainAdminFormEmployees
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainAdminFormEmployees
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim IDLabel As System.Windows.Forms.Label
@@ -37,12 +37,10 @@ Partial Class MainAdminFormEmployees
         Me.PositionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AdminsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Database3SADDataSet = New dtrs.Database3SADDataSet()
-        Me.Tbl_employeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tbl_employeesTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_employeesTableAdapter()
-        Me.TableAdapterManager = New dtrs.Database3SADDataSetTableAdapters.TableAdapterManager()
         Me.Tbl_employeesBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.Tbl_employeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Database3SADDataSet = New dtrs.Database3SADDataSet()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -61,7 +59,8 @@ Partial Class MainAdminFormEmployees
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.Tbl_positionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IDTextBox = New System.Windows.Forms.TextBox()
         Me.Full_NameTextBox = New System.Windows.Forms.TextBox()
@@ -70,7 +69,11 @@ Partial Class MainAdminFormEmployees
         Me.GenderTextBox = New System.Windows.Forms.TextBox()
         Me.AgeTextBox = New System.Windows.Forms.TextBox()
         Me.Date_HiredDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.PositionComboBox = New System.Windows.Forms.ComboBox()
+        Me.Tbl_employeesTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_employeesTableAdapter()
+        Me.TableAdapterManager = New dtrs.Database3SADDataSetTableAdapters.TableAdapterManager()
+        Me.Tbl_positionsTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_positionsTableAdapter()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ViewDTRButton = New System.Windows.Forms.Button()
         IDLabel = New System.Windows.Forms.Label()
         Full_NameLabel = New System.Windows.Forms.Label()
         AddressLabel = New System.Windows.Forms.Label()
@@ -80,17 +83,18 @@ Partial Class MainAdminFormEmployees
         PositionLabel = New System.Windows.Forms.Label()
         Date_HiredLabel = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_employeesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tbl_employeesBindingNavigator.SuspendLayout()
+        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_employeesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tbl_positionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IDLabel
         '
         IDLabel.AutoSize = True
-        IDLabel.Location = New System.Drawing.Point(12, 68)
+        IDLabel.Location = New System.Drawing.Point(12, 65)
         IDLabel.Name = "IDLabel"
         IDLabel.Size = New System.Drawing.Size(21, 13)
         IDLabel.TabIndex = 3
@@ -99,7 +103,7 @@ Partial Class MainAdminFormEmployees
         'Full_NameLabel
         '
         Full_NameLabel.AutoSize = True
-        Full_NameLabel.Location = New System.Drawing.Point(12, 94)
+        Full_NameLabel.Location = New System.Drawing.Point(12, 91)
         Full_NameLabel.Name = "Full_NameLabel"
         Full_NameLabel.Size = New System.Drawing.Size(57, 13)
         Full_NameLabel.TabIndex = 5
@@ -108,7 +112,7 @@ Partial Class MainAdminFormEmployees
         'AddressLabel
         '
         AddressLabel.AutoSize = True
-        AddressLabel.Location = New System.Drawing.Point(12, 120)
+        AddressLabel.Location = New System.Drawing.Point(12, 117)
         AddressLabel.Name = "AddressLabel"
         AddressLabel.Size = New System.Drawing.Size(48, 13)
         AddressLabel.TabIndex = 7
@@ -117,7 +121,7 @@ Partial Class MainAdminFormEmployees
         'PhoneLabel
         '
         PhoneLabel.AutoSize = True
-        PhoneLabel.Location = New System.Drawing.Point(12, 146)
+        PhoneLabel.Location = New System.Drawing.Point(12, 143)
         PhoneLabel.Name = "PhoneLabel"
         PhoneLabel.Size = New System.Drawing.Size(41, 13)
         PhoneLabel.TabIndex = 9
@@ -126,7 +130,7 @@ Partial Class MainAdminFormEmployees
         'GenderLabel
         '
         GenderLabel.AutoSize = True
-        GenderLabel.Location = New System.Drawing.Point(12, 172)
+        GenderLabel.Location = New System.Drawing.Point(12, 169)
         GenderLabel.Name = "GenderLabel"
         GenderLabel.Size = New System.Drawing.Size(45, 13)
         GenderLabel.TabIndex = 11
@@ -135,7 +139,7 @@ Partial Class MainAdminFormEmployees
         'AgeLabel
         '
         AgeLabel.AutoSize = True
-        AgeLabel.Location = New System.Drawing.Point(12, 198)
+        AgeLabel.Location = New System.Drawing.Point(12, 195)
         AgeLabel.Name = "AgeLabel"
         AgeLabel.Size = New System.Drawing.Size(29, 13)
         AgeLabel.TabIndex = 13
@@ -144,7 +148,7 @@ Partial Class MainAdminFormEmployees
         'PositionLabel
         '
         PositionLabel.AutoSize = True
-        PositionLabel.Location = New System.Drawing.Point(12, 224)
+        PositionLabel.Location = New System.Drawing.Point(12, 221)
         PositionLabel.Name = "PositionLabel"
         PositionLabel.Size = New System.Drawing.Size(47, 13)
         PositionLabel.TabIndex = 15
@@ -153,7 +157,7 @@ Partial Class MainAdminFormEmployees
         'Date_HiredLabel
         '
         Date_HiredLabel.AutoSize = True
-        Date_HiredLabel.Location = New System.Drawing.Point(12, 251)
+        Date_HiredLabel.Location = New System.Drawing.Point(12, 248)
         Date_HiredLabel.Name = "Date_HiredLabel"
         Date_HiredLabel.Size = New System.Drawing.Size(61, 13)
         Date_HiredLabel.TabIndex = 17
@@ -164,7 +168,7 @@ Partial Class MainAdminFormEmployees
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeesToolStripMenuItem, Me.PositionsToolStripMenuItem, Me.AdminsToolStripMenuItem, Me.SalaryToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(808, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(824, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -192,30 +196,6 @@ Partial Class MainAdminFormEmployees
         Me.SalaryToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.SalaryToolStripMenuItem.Text = "Salary"
         '
-        'Database3SADDataSet
-        '
-        Me.Database3SADDataSet.DataSetName = "Database3SADDataSet"
-        Me.Database3SADDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Tbl_employeesBindingSource
-        '
-        Me.Tbl_employeesBindingSource.DataMember = "tbl_employees"
-        Me.Tbl_employeesBindingSource.DataSource = Me.Database3SADDataSet
-        '
-        'Tbl_employeesTableAdapter
-        '
-        Me.Tbl_employeesTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tbl_adminsTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_employee_loginTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_employeesTableAdapter = Me.Tbl_employeesTableAdapter
-        Me.TableAdapterManager.tbl_positionsTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_salaryTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = dtrs.Database3SADDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'Tbl_employeesBindingNavigator
         '
         Me.Tbl_employeesBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -230,7 +210,7 @@ Partial Class MainAdminFormEmployees
         Me.Tbl_employeesBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Tbl_employeesBindingNavigator.Name = "Tbl_employeesBindingNavigator"
         Me.Tbl_employeesBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Tbl_employeesBindingNavigator.Size = New System.Drawing.Size(808, 25)
+        Me.Tbl_employeesBindingNavigator.Size = New System.Drawing.Size(824, 25)
         Me.Tbl_employeesBindingNavigator.TabIndex = 2
         Me.Tbl_employeesBindingNavigator.Text = "BindingNavigator1"
         '
@@ -242,6 +222,16 @@ Partial Class MainAdminFormEmployees
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'Tbl_employeesBindingSource
+        '
+        Me.Tbl_employeesBindingSource.DataMember = "tbl_employees"
+        Me.Tbl_employeesBindingSource.DataSource = Me.Database3SADDataSet
+        '
+        'Database3SADDataSet
+        '
+        Me.Database3SADDataSet.DataSetName = "Database3SADDataSet"
+        Me.Database3SADDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -333,7 +323,7 @@ Partial Class MainAdminFormEmployees
         Me.Tbl_employeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Tbl_employeesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.Tbl_employeesDataGridView.DataSource = Me.Tbl_employeesBindingSource
-        Me.Tbl_employeesDataGridView.Location = New System.Drawing.Point(300, 65)
+        Me.Tbl_employeesDataGridView.Location = New System.Drawing.Point(308, 62)
         Me.Tbl_employeesDataGridView.Name = "Tbl_employeesDataGridView"
         Me.Tbl_employeesDataGridView.Size = New System.Drawing.Size(496, 361)
         Me.Tbl_employeesDataGridView.TabIndex = 2
@@ -377,8 +367,18 @@ Partial Class MainAdminFormEmployees
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "Position"
+        Me.DataGridViewTextBoxColumn7.DataSource = Me.Tbl_positionsBindingSource
+        Me.DataGridViewTextBoxColumn7.DisplayMember = "description"
         Me.DataGridViewTextBoxColumn7.HeaderText = "Position"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DataGridViewTextBoxColumn7.ValueMember = "description"
+        '
+        'Tbl_positionsBindingSource
+        '
+        Me.Tbl_positionsBindingSource.DataMember = "tbl_positions"
+        Me.Tbl_positionsBindingSource.DataSource = Me.Database3SADDataSet
         '
         'DataGridViewTextBoxColumn8
         '
@@ -389,73 +389,105 @@ Partial Class MainAdminFormEmployees
         'IDTextBox
         '
         Me.IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_employeesBindingSource, "ID", True))
-        Me.IDTextBox.Location = New System.Drawing.Point(79, 65)
+        Me.IDTextBox.Location = New System.Drawing.Point(79, 62)
         Me.IDTextBox.Name = "IDTextBox"
-        Me.IDTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.IDTextBox.Size = New System.Drawing.Size(212, 20)
         Me.IDTextBox.TabIndex = 4
         '
         'Full_NameTextBox
         '
         Me.Full_NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_employeesBindingSource, "Full_Name", True))
-        Me.Full_NameTextBox.Location = New System.Drawing.Point(79, 91)
+        Me.Full_NameTextBox.Location = New System.Drawing.Point(79, 88)
         Me.Full_NameTextBox.Name = "Full_NameTextBox"
-        Me.Full_NameTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Full_NameTextBox.Size = New System.Drawing.Size(212, 20)
         Me.Full_NameTextBox.TabIndex = 6
         '
         'AddressTextBox
         '
         Me.AddressTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_employeesBindingSource, "Address", True))
-        Me.AddressTextBox.Location = New System.Drawing.Point(79, 117)
+        Me.AddressTextBox.Location = New System.Drawing.Point(79, 114)
         Me.AddressTextBox.Name = "AddressTextBox"
-        Me.AddressTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.AddressTextBox.Size = New System.Drawing.Size(212, 20)
         Me.AddressTextBox.TabIndex = 8
         '
         'PhoneTextBox
         '
         Me.PhoneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_employeesBindingSource, "Phone", True))
-        Me.PhoneTextBox.Location = New System.Drawing.Point(79, 143)
+        Me.PhoneTextBox.Location = New System.Drawing.Point(79, 140)
         Me.PhoneTextBox.Name = "PhoneTextBox"
-        Me.PhoneTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.PhoneTextBox.Size = New System.Drawing.Size(212, 20)
         Me.PhoneTextBox.TabIndex = 10
         '
         'GenderTextBox
         '
         Me.GenderTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_employeesBindingSource, "Gender", True))
-        Me.GenderTextBox.Location = New System.Drawing.Point(79, 169)
+        Me.GenderTextBox.Location = New System.Drawing.Point(79, 166)
         Me.GenderTextBox.Name = "GenderTextBox"
-        Me.GenderTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.GenderTextBox.Size = New System.Drawing.Size(212, 20)
         Me.GenderTextBox.TabIndex = 12
         '
         'AgeTextBox
         '
         Me.AgeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_employeesBindingSource, "Age", True))
-        Me.AgeTextBox.Location = New System.Drawing.Point(79, 195)
+        Me.AgeTextBox.Location = New System.Drawing.Point(79, 192)
         Me.AgeTextBox.Name = "AgeTextBox"
-        Me.AgeTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.AgeTextBox.Size = New System.Drawing.Size(212, 20)
         Me.AgeTextBox.TabIndex = 14
         '
         'Date_HiredDateTimePicker
         '
         Me.Date_HiredDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Tbl_employeesBindingSource, "Date_Hired", True))
-        Me.Date_HiredDateTimePicker.Location = New System.Drawing.Point(79, 247)
+        Me.Date_HiredDateTimePicker.Location = New System.Drawing.Point(79, 244)
         Me.Date_HiredDateTimePicker.Name = "Date_HiredDateTimePicker"
-        Me.Date_HiredDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.Date_HiredDateTimePicker.Size = New System.Drawing.Size(212, 20)
         Me.Date_HiredDateTimePicker.TabIndex = 18
         '
-        'PositionComboBox
+        'Tbl_employeesTableAdapter
         '
-        Me.PositionComboBox.FormattingEnabled = True
-        Me.PositionComboBox.Location = New System.Drawing.Point(79, 221)
-        Me.PositionComboBox.Name = "PositionComboBox"
-        Me.PositionComboBox.Size = New System.Drawing.Size(200, 21)
-        Me.PositionComboBox.TabIndex = 19
+        Me.Tbl_employeesTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tbl_adminsTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_employee_loginTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_employeesTableAdapter = Me.Tbl_employeesTableAdapter
+        Me.TableAdapterManager.tbl_positionsTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_salaryTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = dtrs.Database3SADDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Tbl_positionsTableAdapter
+        '
+        Me.Tbl_positionsTableAdapter.ClearBeforeFill = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.Tbl_employeesBindingSource, "Position", True))
+        Me.ComboBox1.DataSource = Me.Tbl_positionsBindingSource
+        Me.ComboBox1.DisplayMember = "description"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(79, 217)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(212, 21)
+        Me.ComboBox1.TabIndex = 19
+        Me.ComboBox1.ValueMember = "description"
+        '
+        'ViewDTRButton
+        '
+        Me.ViewDTRButton.Location = New System.Drawing.Point(79, 281)
+        Me.ViewDTRButton.Name = "ViewDTRButton"
+        Me.ViewDTRButton.Size = New System.Drawing.Size(75, 23)
+        Me.ViewDTRButton.TabIndex = 20
+        Me.ViewDTRButton.Text = "View DTR"
+        Me.ViewDTRButton.UseVisualStyleBackColor = True
         '
         'MainAdminFormEmployees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(808, 450)
-        Me.Controls.Add(Me.PositionComboBox)
+        Me.ClientSize = New System.Drawing.Size(824, 571)
+        Me.Controls.Add(Me.ViewDTRButton)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(IDLabel)
         Me.Controls.Add(Me.IDTextBox)
         Me.Controls.Add(Full_NameLabel)
@@ -479,12 +511,13 @@ Partial Class MainAdminFormEmployees
         Me.Text = "Admin - Daily Time Record Management System - Employees"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_employeesBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Tbl_employeesBindingNavigator.ResumeLayout(False)
         Me.Tbl_employeesBindingNavigator.PerformLayout()
+        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_employeesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_positionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -513,14 +546,6 @@ Partial Class MainAdminFormEmployees
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents Tbl_employeesBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents Tbl_employeesDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents IDTextBox As TextBox
     Friend WithEvents Full_NameTextBox As TextBox
     Friend WithEvents AddressTextBox As TextBox
@@ -528,5 +553,16 @@ Partial Class MainAdminFormEmployees
     Friend WithEvents GenderTextBox As TextBox
     Friend WithEvents AgeTextBox As TextBox
     Friend WithEvents Date_HiredDateTimePicker As DateTimePicker
-    Friend WithEvents PositionComboBox As ComboBox
+    Friend WithEvents Tbl_positionsBindingSource As BindingSource
+    Friend WithEvents Tbl_positionsTableAdapter As Database3SADDataSetTableAdapters.tbl_positionsTableAdapter
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewComboBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ViewDTRButton As Button
 End Class

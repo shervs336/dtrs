@@ -32,9 +32,12 @@ Partial Class MainAdminFormBlank
         Me.Tbl_employeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_employeesTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_employeesTableAdapter()
         Me.TableAdapterManager = New dtrs.Database3SADDataSetTableAdapters.TableAdapterManager()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.AdminNameLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -94,11 +97,26 @@ Partial Class MainAdminFormBlank
         Me.TableAdapterManager.tbl_salaryTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = dtrs.Database3SADDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdminNameLabel})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 436)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(808, 22)
+        Me.StatusStrip1.TabIndex = 1
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'AdminNameLabel
+        '
+        Me.AdminNameLabel.Name = "AdminNameLabel"
+        Me.AdminNameLabel.Size = New System.Drawing.Size(0, 17)
+        '
         'MainAdminFormBlank
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(808, 458)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MainAdminFormBlank"
@@ -108,6 +126,8 @@ Partial Class MainAdminFormBlank
         Me.MenuStrip1.PerformLayout()
         CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -122,4 +142,6 @@ Partial Class MainAdminFormBlank
     Friend WithEvents Tbl_employeesTableAdapter As Database3SADDataSetTableAdapters.tbl_employeesTableAdapter
     Friend WithEvents TableAdapterManager As Database3SADDataSetTableAdapters.TableAdapterManager
     Friend WithEvents SalaryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents AdminNameLabel As ToolStripStatusLabel
 End Class

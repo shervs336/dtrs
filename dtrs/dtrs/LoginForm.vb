@@ -29,6 +29,7 @@ Public Class LoginForm
 
         ' CHECK IF QUERY HAS COUNT
         If Access.RecordCount > 0 Then
+            LoggedUser.LoggedUser = Access.DBDT.Rows("0")
             Me.Hide()
             MainAdminFormBlank.Show()
             Exit Sub
@@ -50,13 +51,5 @@ Public Class LoginForm
     Private Sub ClosingToMenu()
         Me.Hide()
         MainForm.Show()
-    End Sub
-
-    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
-
-    End Sub
-
-    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
-
     End Sub
 End Class
