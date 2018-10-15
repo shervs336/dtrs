@@ -10,8 +10,6 @@
     End Sub
 
     Private Sub MainAdminFormEmployees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_salary_Query' table. You can move, or remove it, as needed.
-        Me.Tbl_salary_QueryTableAdapter.Fill(Me.Database3SADDataSet.tbl_salary_Query)
         'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_positions' table. You can move, or remove it, as needed.
         Me.Tbl_positionsTableAdapter.Fill(Me.Database3SADDataSet.tbl_positions)
         'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_employees' table. You can move, or remove it, as needed.

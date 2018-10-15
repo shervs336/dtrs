@@ -22,18 +22,13 @@ Partial Class MainAdminFormSalary
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.EmployeesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PositionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AdminsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Database3SADDataSet = New dtrs.Database3SADDataSet()
-        Me.Tbl_salary_QueryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tbl_salary_QueryTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_salary_QueryTableAdapter()
         Me.TableAdapterManager = New dtrs.Database3SADDataSetTableAdapters.TableAdapterManager()
-        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
-        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.Tbl_salary_QueryDataGridView = New System.Windows.Forms.DataGridView()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -41,7 +36,6 @@ Partial Class MainAdminFormSalary
         Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tbl_salary_QueryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_salary_QueryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -83,15 +77,6 @@ Partial Class MainAdminFormSalary
         Me.Database3SADDataSet.DataSetName = "Database3SADDataSet"
         Me.Database3SADDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Tbl_salary_QueryBindingSource
-        '
-        Me.Tbl_salary_QueryBindingSource.DataMember = "tbl_salary Query"
-        Me.Tbl_salary_QueryBindingSource.DataSource = Me.Database3SADDataSet
-        '
-        'Tbl_salary_QueryTableAdapter
-        '
-        Me.Tbl_salary_QueryTableAdapter.ClearBeforeFill = True
-        '
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
@@ -102,10 +87,6 @@ Partial Class MainAdminFormSalary
         Me.TableAdapterManager.tbl_positionsTableAdapter = Nothing
         Me.TableAdapterManager.tbl_salaryTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = dtrs.Database3SADDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'PrintDialog1
-        '
-        Me.PrintDialog1.UseEXDialog = True
         '
         'Tbl_salary_QueryDataGridView
         '
@@ -167,7 +148,6 @@ Partial Class MainAdminFormSalary
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tbl_salary_QueryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_salary_QueryDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -180,11 +160,7 @@ Partial Class MainAdminFormSalary
     Friend WithEvents AdminsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalaryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Database3SADDataSet As Database3SADDataSet
-    Friend WithEvents Tbl_salary_QueryBindingSource As BindingSource
-    Friend WithEvents Tbl_salary_QueryTableAdapter As Database3SADDataSetTableAdapters.tbl_salary_QueryTableAdapter
     Friend WithEvents TableAdapterManager As Database3SADDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents PrintDocument1 As Printing.PrintDocument
-    Friend WithEvents PrintDialog1 As PrintDialog
     Friend WithEvents Tbl_salary_QueryDataGridView As DataGridView
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label1 As Label

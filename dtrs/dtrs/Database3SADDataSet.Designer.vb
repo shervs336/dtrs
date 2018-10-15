@@ -35,7 +35,7 @@ Partial Public Class Database3SADDataSet
     
     Private tabletbl_salary As tbl_salaryDataTable
     
-    Private tabletbl_salary_Query As tbl_salary_QueryDataTable
+    Private tabletbl_salary_query As tbl_salary_queryDataTable
     
     Private relationtbl_employeestbl_employee_login As Global.System.Data.DataRelation
     
@@ -85,8 +85,8 @@ Partial Public Class Database3SADDataSet
             If (Not (ds.Tables("tbl_salary")) Is Nothing) Then
                 MyBase.Tables.Add(New tbl_salaryDataTable(ds.Tables("tbl_salary")))
             End If
-            If (Not (ds.Tables("tbl_salary Query")) Is Nothing) Then
-                MyBase.Tables.Add(New tbl_salary_QueryDataTable(ds.Tables("tbl_salary Query")))
+            If (Not (ds.Tables("tbl_salary_query")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_salary_queryDataTable(ds.Tables("tbl_salary_query")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -159,9 +159,9 @@ Partial Public Class Database3SADDataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property tbl_salary_Query() As tbl_salary_QueryDataTable
+    Public ReadOnly Property tbl_salary_query() As tbl_salary_queryDataTable
         Get
-            Return Me.tabletbl_salary_Query
+            Return Me.tabletbl_salary_query
         End Get
     End Property
     
@@ -247,8 +247,8 @@ Partial Public Class Database3SADDataSet
             If (Not (ds.Tables("tbl_salary")) Is Nothing) Then
                 MyBase.Tables.Add(New tbl_salaryDataTable(ds.Tables("tbl_salary")))
             End If
-            If (Not (ds.Tables("tbl_salary Query")) Is Nothing) Then
-                MyBase.Tables.Add(New tbl_salary_QueryDataTable(ds.Tables("tbl_salary Query")))
+            If (Not (ds.Tables("tbl_salary_query")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_salary_queryDataTable(ds.Tables("tbl_salary_query")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -312,10 +312,10 @@ Partial Public Class Database3SADDataSet
                 Me.tabletbl_salary.InitVars
             End If
         End If
-        Me.tabletbl_salary_Query = CType(MyBase.Tables("tbl_salary Query"),tbl_salary_QueryDataTable)
+        Me.tabletbl_salary_query = CType(MyBase.Tables("tbl_salary_query"),tbl_salary_queryDataTable)
         If (initTable = true) Then
-            If (Not (Me.tabletbl_salary_Query) Is Nothing) Then
-                Me.tabletbl_salary_Query.InitVars
+            If (Not (Me.tabletbl_salary_query) Is Nothing) Then
+                Me.tabletbl_salary_query.InitVars
             End If
         End If
         Me.relationtbl_employeestbl_employee_login = Me.Relations("tbl_employeestbl_employee_login")
@@ -340,8 +340,8 @@ Partial Public Class Database3SADDataSet
         MyBase.Tables.Add(Me.tabletbl_positions)
         Me.tabletbl_salary = New tbl_salaryDataTable()
         MyBase.Tables.Add(Me.tabletbl_salary)
-        Me.tabletbl_salary_Query = New tbl_salary_QueryDataTable()
-        MyBase.Tables.Add(Me.tabletbl_salary_Query)
+        Me.tabletbl_salary_query = New tbl_salary_queryDataTable()
+        MyBase.Tables.Add(Me.tabletbl_salary_query)
         Me.relationtbl_employeestbl_employee_login = New Global.System.Data.DataRelation("tbl_employeestbl_employee_login", New Global.System.Data.DataColumn() {Me.tabletbl_employees.IDColumn}, New Global.System.Data.DataColumn() {Me.tabletbl_employee_login.Employee_IDColumn}, false)
         Me.Relations.Add(Me.relationtbl_employeestbl_employee_login)
         Me.relationtbl_employeestbl_salary = New Global.System.Data.DataRelation("tbl_employeestbl_salary", New Global.System.Data.DataColumn() {Me.tabletbl_employees.IDColumn}, New Global.System.Data.DataColumn() {Me.tabletbl_salary.Employee_IDColumn}, false)
@@ -380,7 +380,7 @@ Partial Public Class Database3SADDataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-    Private Function ShouldSerializetbl_salary_Query() As Boolean
+    Private Function ShouldSerializetbl_salary_query() As Boolean
         Return false
     End Function
     
@@ -458,7 +458,7 @@ Partial Public Class Database3SADDataSet
     Public Delegate Sub tbl_salaryRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_salaryRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-    Public Delegate Sub tbl_salary_QueryRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_salary_QueryRowChangeEvent)
+    Public Delegate Sub tbl_salary_queryRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_salary_queryRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -1978,8 +1978,8 @@ Partial Public Class Database3SADDataSet
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class tbl_salary_QueryDataTable
-        Inherits Global.System.Data.TypedTableBase(Of tbl_salary_QueryRow)
+    Partial Public Class tbl_salary_queryDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_salary_queryRow)
         
         Private columnEmployee_ID As Global.System.Data.DataColumn
         
@@ -1991,6 +1991,8 @@ Partial Public Class Database3SADDataSet
         
         Private columnPosition As Global.System.Data.DataColumn
         
+        Private columnDate_Hired As Global.System.Data.DataColumn
+        
         Private columnTotal_Salary As Global.System.Data.DataColumn
         
         Private columnPayroll_Period As Global.System.Data.DataColumn
@@ -1999,7 +2001,7 @@ Partial Public Class Database3SADDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "tbl_salary Query"
+            Me.TableName = "tbl_salary_query"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -2072,6 +2074,14 @@ Partial Public Class Database3SADDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Date_HiredColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDate_Hired
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public ReadOnly Property Total_SalaryColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnTotal_Salary
@@ -2097,44 +2107,44 @@ Partial Public Class Database3SADDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_salary_QueryRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_salary_queryRow
             Get
-                Return CType(Me.Rows(index),tbl_salary_QueryRow)
+                Return CType(Me.Rows(index),tbl_salary_queryRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Event tbl_salary_QueryRowChanging As tbl_salary_QueryRowChangeEventHandler
+        Public Event tbl_salary_queryRowChanging As tbl_salary_queryRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Event tbl_salary_QueryRowChanged As tbl_salary_QueryRowChangeEventHandler
+        Public Event tbl_salary_queryRowChanged As tbl_salary_queryRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Event tbl_salary_QueryRowDeleting As tbl_salary_QueryRowChangeEventHandler
+        Public Event tbl_salary_queryRowDeleting As tbl_salary_queryRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Event tbl_salary_QueryRowDeleted As tbl_salary_QueryRowChangeEventHandler
+        Public Event tbl_salary_queryRowDeleted As tbl_salary_queryRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Sub Addtbl_salary_QueryRow(ByVal row As tbl_salary_QueryRow)
+        Public Overloads Sub Addtbl_salary_queryRow(ByVal row As tbl_salary_queryRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function Addtbl_salary_QueryRow(ByVal Employee_ID As Integer, ByVal Total_Hours As Short, ByVal Rate As Integer, ByVal Full_Name As String, ByVal Position As String, ByVal Total_Salary As Integer, ByVal Payroll_Period As String) As tbl_salary_QueryRow
-            Dim rowtbl_salary_QueryRow As tbl_salary_QueryRow = CType(Me.NewRow,tbl_salary_QueryRow)
-            Dim columnValuesArray() As Object = New Object() {Employee_ID, Total_Hours, Rate, Full_Name, Position, Total_Salary, Payroll_Period}
-            rowtbl_salary_QueryRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowtbl_salary_QueryRow)
-            Return rowtbl_salary_QueryRow
+        Public Overloads Function Addtbl_salary_queryRow(ByVal Employee_ID As Integer, ByVal Total_Hours As Short, ByVal Rate As Double, ByVal Full_Name As String, ByVal Position As String, ByVal Date_Hired As Date, ByVal Total_Salary As Double, ByVal Payroll_Period As String) As tbl_salary_queryRow
+            Dim rowtbl_salary_queryRow As tbl_salary_queryRow = CType(Me.NewRow,tbl_salary_queryRow)
+            Dim columnValuesArray() As Object = New Object() {Employee_ID, Total_Hours, Rate, Full_Name, Position, Date_Hired, Total_Salary, Payroll_Period}
+            rowtbl_salary_queryRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_salary_queryRow)
+            Return rowtbl_salary_queryRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As tbl_salary_QueryDataTable = CType(MyBase.Clone,tbl_salary_QueryDataTable)
+            Dim cln As tbl_salary_queryDataTable = CType(MyBase.Clone,tbl_salary_queryDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -2142,7 +2152,7 @@ Partial Public Class Database3SADDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New tbl_salary_QueryDataTable()
+            Return New tbl_salary_queryDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2153,6 +2163,7 @@ Partial Public Class Database3SADDataSet
             Me.columnRate = MyBase.Columns("Rate")
             Me.columnFull_Name = MyBase.Columns("Full_Name")
             Me.columnPosition = MyBase.Columns("Position")
+            Me.columnDate_Hired = MyBase.Columns("Date_Hired")
             Me.columnTotal_Salary = MyBase.Columns("Total_Salary")
             Me.columnPayroll_Period = MyBase.Columns("Payroll_Period")
         End Sub
@@ -2164,45 +2175,48 @@ Partial Public Class Database3SADDataSet
             MyBase.Columns.Add(Me.columnEmployee_ID)
             Me.columnTotal_Hours = New Global.System.Data.DataColumn("Total_Hours", GetType(Short), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTotal_Hours)
-            Me.columnRate = New Global.System.Data.DataColumn("Rate", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnRate = New Global.System.Data.DataColumn("Rate", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnRate)
             Me.columnFull_Name = New Global.System.Data.DataColumn("Full_Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFull_Name)
             Me.columnPosition = New Global.System.Data.DataColumn("Position", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPosition)
-            Me.columnTotal_Salary = New Global.System.Data.DataColumn("Total_Salary", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnDate_Hired = New Global.System.Data.DataColumn("Date_Hired", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDate_Hired)
+            Me.columnTotal_Salary = New Global.System.Data.DataColumn("Total_Salary", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTotal_Salary)
             Me.columnPayroll_Period = New Global.System.Data.DataColumn("Payroll_Period", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPayroll_Period)
             Me.columnFull_Name.MaxLength = 50
             Me.columnPosition.MaxLength = 255
             Me.columnTotal_Salary.ReadOnly = true
+            Me.columnPayroll_Period.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function Newtbl_salary_QueryRow() As tbl_salary_QueryRow
-            Return CType(Me.NewRow,tbl_salary_QueryRow)
+        Public Function Newtbl_salary_queryRow() As tbl_salary_queryRow
+            Return CType(Me.NewRow,tbl_salary_queryRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New tbl_salary_QueryRow(builder)
+            Return New tbl_salary_queryRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(tbl_salary_QueryRow)
+            Return GetType(tbl_salary_queryRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.tbl_salary_QueryRowChangedEvent) Is Nothing) Then
-                RaiseEvent tbl_salary_QueryRowChanged(Me, New tbl_salary_QueryRowChangeEvent(CType(e.Row,tbl_salary_QueryRow), e.Action))
+            If (Not (Me.tbl_salary_queryRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_salary_queryRowChanged(Me, New tbl_salary_queryRowChangeEvent(CType(e.Row,tbl_salary_queryRow), e.Action))
             End If
         End Sub
         
@@ -2210,8 +2224,8 @@ Partial Public Class Database3SADDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.tbl_salary_QueryRowChangingEvent) Is Nothing) Then
-                RaiseEvent tbl_salary_QueryRowChanging(Me, New tbl_salary_QueryRowChangeEvent(CType(e.Row,tbl_salary_QueryRow), e.Action))
+            If (Not (Me.tbl_salary_queryRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_salary_queryRowChanging(Me, New tbl_salary_queryRowChangeEvent(CType(e.Row,tbl_salary_queryRow), e.Action))
             End If
         End Sub
         
@@ -2219,8 +2233,8 @@ Partial Public Class Database3SADDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.tbl_salary_QueryRowDeletedEvent) Is Nothing) Then
-                RaiseEvent tbl_salary_QueryRowDeleted(Me, New tbl_salary_QueryRowChangeEvent(CType(e.Row,tbl_salary_QueryRow), e.Action))
+            If (Not (Me.tbl_salary_queryRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_salary_queryRowDeleted(Me, New tbl_salary_queryRowChangeEvent(CType(e.Row,tbl_salary_queryRow), e.Action))
             End If
         End Sub
         
@@ -2228,14 +2242,14 @@ Partial Public Class Database3SADDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.tbl_salary_QueryRowDeletingEvent) Is Nothing) Then
-                RaiseEvent tbl_salary_QueryRowDeleting(Me, New tbl_salary_QueryRowChangeEvent(CType(e.Row,tbl_salary_QueryRow), e.Action))
+            If (Not (Me.tbl_salary_queryRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_salary_queryRowDeleting(Me, New tbl_salary_queryRowChangeEvent(CType(e.Row,tbl_salary_queryRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub Removetbl_salary_QueryRow(ByVal row As tbl_salary_QueryRow)
+        Public Sub Removetbl_salary_queryRow(ByVal row As tbl_salary_queryRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -2262,7 +2276,7 @@ Partial Public Class Database3SADDataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "tbl_salary_QueryDataTable"
+            attribute2.FixedValue = "tbl_salary_queryDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -2950,16 +2964,16 @@ Partial Public Class Database3SADDataSet
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class tbl_salary_QueryRow
+    Partial Public Class tbl_salary_queryRow
         Inherits Global.System.Data.DataRow
         
-        Private tabletbl_salary_Query As tbl_salary_QueryDataTable
+        Private tabletbl_salary_query As tbl_salary_queryDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tabletbl_salary_Query = CType(Me.Table,tbl_salary_QueryDataTable)
+            Me.tabletbl_salary_query = CType(Me.Table,tbl_salary_queryDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2967,13 +2981,13 @@ Partial Public Class Database3SADDataSet
         Public Property Employee_ID() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tabletbl_salary_Query.Employee_IDColumn),Integer)
+                    Return CType(Me(Me.tabletbl_salary_query.Employee_IDColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Employee_ID' in table 'tbl_salary Query' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Employee_ID' in table 'tbl_salary_query' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbl_salary_Query.Employee_IDColumn) = value
+                Me(Me.tabletbl_salary_query.Employee_IDColumn) = value
             End Set
         End Property
         
@@ -2982,28 +2996,28 @@ Partial Public Class Database3SADDataSet
         Public Property Total_Hours() As Short
             Get
                 Try 
-                    Return CType(Me(Me.tabletbl_salary_Query.Total_HoursColumn),Short)
+                    Return CType(Me(Me.tabletbl_salary_query.Total_HoursColumn),Short)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Total_Hours' in table 'tbl_salary Query' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Total_Hours' in table 'tbl_salary_query' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbl_salary_Query.Total_HoursColumn) = value
+                Me(Me.tabletbl_salary_query.Total_HoursColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property Rate() As Integer
+        Public Property Rate() As Double
             Get
                 Try 
-                    Return CType(Me(Me.tabletbl_salary_Query.RateColumn),Integer)
+                    Return CType(Me(Me.tabletbl_salary_query.RateColumn),Double)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Rate' in table 'tbl_salary Query' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Rate' in table 'tbl_salary_query' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbl_salary_Query.RateColumn) = value
+                Me(Me.tabletbl_salary_query.RateColumn) = value
             End Set
         End Property
         
@@ -3012,13 +3026,13 @@ Partial Public Class Database3SADDataSet
         Public Property Full_Name() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbl_salary_Query.Full_NameColumn),String)
+                    Return CType(Me(Me.tabletbl_salary_query.Full_NameColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Full_Name' in table 'tbl_salary Query' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Full_Name' in table 'tbl_salary_query' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbl_salary_Query.Full_NameColumn) = value
+                Me(Me.tabletbl_salary_query.Full_NameColumn) = value
             End Set
         End Property
         
@@ -3027,28 +3041,43 @@ Partial Public Class Database3SADDataSet
         Public Property Position() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbl_salary_Query.PositionColumn),String)
+                    Return CType(Me(Me.tabletbl_salary_query.PositionColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Position' in table 'tbl_salary Query' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Position' in table 'tbl_salary_query' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbl_salary_Query.PositionColumn) = value
+                Me(Me.tabletbl_salary_query.PositionColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property Total_Salary() As Integer
+        Public Property Date_Hired() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tabletbl_salary_Query.Total_SalaryColumn),Integer)
+                    Return CType(Me(Me.tabletbl_salary_query.Date_HiredColumn),Date)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Total_Salary' in table 'tbl_salary Query' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Date_Hired' in table 'tbl_salary_query' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbl_salary_Query.Total_SalaryColumn) = value
+                Me(Me.tabletbl_salary_query.Date_HiredColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Total_Salary() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_salary_query.Total_SalaryColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Total_Salary' in table 'tbl_salary_query' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_salary_query.Total_SalaryColumn) = value
             End Set
         End Property
         
@@ -3057,98 +3086,110 @@ Partial Public Class Database3SADDataSet
         Public Property Payroll_Period() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletbl_salary_Query.Payroll_PeriodColumn),String)
+                    Return CType(Me(Me.tabletbl_salary_query.Payroll_PeriodColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Payroll_Period' in table 'tbl_salary Query' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Payroll_Period' in table 'tbl_salary_query' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabletbl_salary_Query.Payroll_PeriodColumn) = value
+                Me(Me.tabletbl_salary_query.Payroll_PeriodColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsEmployee_IDNull() As Boolean
-            Return Me.IsNull(Me.tabletbl_salary_Query.Employee_IDColumn)
+            Return Me.IsNull(Me.tabletbl_salary_query.Employee_IDColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetEmployee_IDNull()
-            Me(Me.tabletbl_salary_Query.Employee_IDColumn) = Global.System.Convert.DBNull
+            Me(Me.tabletbl_salary_query.Employee_IDColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsTotal_HoursNull() As Boolean
-            Return Me.IsNull(Me.tabletbl_salary_Query.Total_HoursColumn)
+            Return Me.IsNull(Me.tabletbl_salary_query.Total_HoursColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetTotal_HoursNull()
-            Me(Me.tabletbl_salary_Query.Total_HoursColumn) = Global.System.Convert.DBNull
+            Me(Me.tabletbl_salary_query.Total_HoursColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsRateNull() As Boolean
-            Return Me.IsNull(Me.tabletbl_salary_Query.RateColumn)
+            Return Me.IsNull(Me.tabletbl_salary_query.RateColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetRateNull()
-            Me(Me.tabletbl_salary_Query.RateColumn) = Global.System.Convert.DBNull
+            Me(Me.tabletbl_salary_query.RateColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsFull_NameNull() As Boolean
-            Return Me.IsNull(Me.tabletbl_salary_Query.Full_NameColumn)
+            Return Me.IsNull(Me.tabletbl_salary_query.Full_NameColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetFull_NameNull()
-            Me(Me.tabletbl_salary_Query.Full_NameColumn) = Global.System.Convert.DBNull
+            Me(Me.tabletbl_salary_query.Full_NameColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsPositionNull() As Boolean
-            Return Me.IsNull(Me.tabletbl_salary_Query.PositionColumn)
+            Return Me.IsNull(Me.tabletbl_salary_query.PositionColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetPositionNull()
-            Me(Me.tabletbl_salary_Query.PositionColumn) = Global.System.Convert.DBNull
+            Me(Me.tabletbl_salary_query.PositionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsDate_HiredNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_salary_query.Date_HiredColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetDate_HiredNull()
+            Me(Me.tabletbl_salary_query.Date_HiredColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsTotal_SalaryNull() As Boolean
-            Return Me.IsNull(Me.tabletbl_salary_Query.Total_SalaryColumn)
+            Return Me.IsNull(Me.tabletbl_salary_query.Total_SalaryColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetTotal_SalaryNull()
-            Me(Me.tabletbl_salary_Query.Total_SalaryColumn) = Global.System.Convert.DBNull
+            Me(Me.tabletbl_salary_query.Total_SalaryColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsPayroll_PeriodNull() As Boolean
-            Return Me.IsNull(Me.tabletbl_salary_Query.Payroll_PeriodColumn)
+            Return Me.IsNull(Me.tabletbl_salary_query.Payroll_PeriodColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetPayroll_PeriodNull()
-            Me(Me.tabletbl_salary_Query.Payroll_PeriodColumn) = Global.System.Convert.DBNull
+            Me(Me.tabletbl_salary_query.Payroll_PeriodColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -3336,16 +3377,16 @@ Partial Public Class Database3SADDataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-    Public Class tbl_salary_QueryRowChangeEvent
+    Public Class tbl_salary_queryRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As tbl_salary_QueryRow
+        Private eventRow As tbl_salary_queryRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub New(ByVal row As tbl_salary_QueryRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As tbl_salary_queryRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -3353,7 +3394,7 @@ Partial Public Class Database3SADDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property Row() As tbl_salary_QueryRow
+        Public ReadOnly Property Row() As tbl_salary_queryRow
             Get
                 Return Me.eventRow
             End Get
@@ -5142,7 +5183,7 @@ Namespace Database3SADDataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class tbl_salary_QueryTableAdapter
+    Partial Public Class tbl_salary_queryTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
@@ -5259,13 +5300,15 @@ Namespace Database3SADDataSetTableAdapters
             Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "tbl_salary Query"
+            tableMapping.DataSetTable = "tbl_salary_query"
             tableMapping.ColumnMappings.Add("Employee_ID", "Employee_ID")
             tableMapping.ColumnMappings.Add("Total_Hours", "Total_Hours")
             tableMapping.ColumnMappings.Add("Rate", "Rate")
             tableMapping.ColumnMappings.Add("Full_Name", "Full_Name")
             tableMapping.ColumnMappings.Add("Position", "Position")
+            tableMapping.ColumnMappings.Add("Date_Hired", "Date_Hired")
             tableMapping.ColumnMappings.Add("Total_Salary", "Total_Salary")
+            tableMapping.ColumnMappings.Add("Payroll_Period", "Payroll_Period")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -5283,7 +5326,7 @@ Namespace Database3SADDataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Employee_ID, Total_Hours, Rate, Full_Name, [Position], Date_Hired, Total_S"& _ 
-                "alary FROM [tbl_salary Query]"
+                "alary, Payroll_Period FROM tbl_salary_query"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -5291,7 +5334,7 @@ Namespace Database3SADDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Database3SADDataSet.tbl_salary_QueryDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Database3SADDataSet.tbl_salary_queryDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -5304,9 +5347,9 @@ Namespace Database3SADDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Database3SADDataSet.tbl_salary_QueryDataTable
+        Public Overloads Overridable Function GetData() As Database3SADDataSet.tbl_salary_queryDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Database3SADDataSet.tbl_salary_QueryDataTable = New Database3SADDataSet.tbl_salary_QueryDataTable()
+            Dim dataTable As Database3SADDataSet.tbl_salary_queryDataTable = New Database3SADDataSet.tbl_salary_queryDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function

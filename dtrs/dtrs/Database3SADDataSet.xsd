@@ -278,12 +278,12 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_salary QueryTableAdapter" GeneratorDataComponentClassName="tbl_salary_QueryTableAdapter" Name="tbl_salary Query" UserDataComponentName="tbl_salary QueryTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_salary_queryTableAdapter" GeneratorDataComponentClassName="tbl_salary_queryTableAdapter" Name="tbl_salary_query" UserDataComponentName="tbl_salary_queryTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DatabaseConnectionString (MySettings)" DbObjectName="tbl_salary Query" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DatabaseConnectionString (MySettings)" DbObjectName="tbl_salary_query" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Employee_ID, Total_Hours, Rate, Full_Name, [Position], Date_Hired, Total_Salary FROM [tbl_salary Query]</CommandText>
+                    <CommandText>SELECT Employee_ID, Total_Hours, Rate, Full_Name, [Position], Date_Hired, Total_Salary, Payroll_Period FROM tbl_salary_query</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -295,7 +295,9 @@
               <Mapping SourceColumn="Rate" DataSetColumn="Rate" />
               <Mapping SourceColumn="Full_Name" DataSetColumn="Full_Name" />
               <Mapping SourceColumn="Position" DataSetColumn="Position" />
+              <Mapping SourceColumn="Date_Hired" DataSetColumn="Date_Hired" />
               <Mapping SourceColumn="Total_Salary" DataSetColumn="Total_Salary" />
+              <Mapping SourceColumn="Payroll_Period" DataSetColumn="Payroll_Period" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -412,12 +414,12 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_salary_x0020_Query" msprop:Generator_TableClassName="tbl_salary_QueryDataTable" msprop:Generator_TableVarName="tabletbl_salary_Query" msprop:Generator_TablePropName="tbl_salary_Query" msprop:Generator_RowDeletingName="tbl_salary_QueryRowDeleting" msprop:Generator_RowChangingName="tbl_salary_QueryRowChanging" msprop:Generator_RowEvHandlerName="tbl_salary_QueryRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_salary_QueryRowDeleted" msprop:Generator_UserTableName="tbl_salary Query" msprop:Generator_RowChangedName="tbl_salary_QueryRowChanged" msprop:Generator_RowEvArgName="tbl_salary_QueryRowChangeEvent" msprop:Generator_RowClassName="tbl_salary_QueryRow">
+        <xs:element name="tbl_salary_query" msprop:Generator_TableClassName="tbl_salary_queryDataTable" msprop:Generator_TableVarName="tabletbl_salary_query" msprop:Generator_TablePropName="tbl_salary_query" msprop:Generator_RowDeletingName="tbl_salary_queryRowDeleting" msprop:Generator_RowChangingName="tbl_salary_queryRowChanging" msprop:Generator_RowEvHandlerName="tbl_salary_queryRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_salary_queryRowDeleted" msprop:Generator_UserTableName="tbl_salary_query" msprop:Generator_RowChangedName="tbl_salary_queryRowChanged" msprop:Generator_RowEvArgName="tbl_salary_queryRowChangeEvent" msprop:Generator_RowClassName="tbl_salary_queryRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Employee_ID" msprop:Generator_ColumnVarNameInTable="columnEmployee_ID" msprop:Generator_ColumnPropNameInRow="Employee_ID" msprop:Generator_ColumnPropNameInTable="Employee_IDColumn" msprop:Generator_UserColumnName="Employee_ID" type="xs:int" minOccurs="0" />
               <xs:element name="Total_Hours" msprop:Generator_ColumnVarNameInTable="columnTotal_Hours" msprop:Generator_ColumnPropNameInRow="Total_Hours" msprop:Generator_ColumnPropNameInTable="Total_HoursColumn" msprop:Generator_UserColumnName="Total_Hours" type="xs:short" minOccurs="0" />
-              <xs:element name="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_UserColumnName="Rate" type="xs:int" minOccurs="0" />
+              <xs:element name="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_UserColumnName="Rate" type="xs:double" minOccurs="0" />
               <xs:element name="Full_Name" msprop:Generator_ColumnVarNameInTable="columnFull_Name" msprop:Generator_ColumnPropNameInRow="Full_Name" msprop:Generator_ColumnPropNameInTable="Full_NameColumn" msprop:Generator_UserColumnName="Full_Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -432,8 +434,15 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Total_Salary" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal_Salary" msprop:Generator_ColumnPropNameInRow="Total_Salary" msprop:Generator_ColumnPropNameInTable="Total_SalaryColumn" msprop:Generator_UserColumnName="Total_Salary" type="xs:int" minOccurs="0" />
-              <xs:element name="Payroll_Period" msprop:Generator_ColumnVarNameInTable="columnPayroll_Period" msprop:Generator_ColumnPropNameInRow="Payroll_Period" msprop:Generator_ColumnPropNameInTable="Payroll_PeriodColumn" msprop:Generator_UserColumnName="Payroll_Period" type="xs:string" minOccurs="0" />
+              <xs:element name="Date_Hired" msprop:Generator_ColumnVarNameInTable="columnDate_Hired" msprop:Generator_ColumnPropNameInRow="Date_Hired" msprop:Generator_ColumnPropNameInTable="Date_HiredColumn" msprop:Generator_UserColumnName="Date_Hired" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Total_Salary" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal_Salary" msprop:Generator_ColumnPropNameInRow="Total_Salary" msprop:Generator_ColumnPropNameInTable="Total_SalaryColumn" msprop:Generator_UserColumnName="Total_Salary" type="xs:double" minOccurs="0" />
+              <xs:element name="Payroll_Period" msprop:Generator_ColumnVarNameInTable="columnPayroll_Period" msprop:Generator_ColumnPropNameInRow="Payroll_Period" msprop:Generator_ColumnPropNameInTable="Payroll_PeriodColumn" msprop:Generator_UserColumnName="Payroll_Period" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

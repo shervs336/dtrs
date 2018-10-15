@@ -32,8 +32,6 @@ Partial Class MainAdminFormEmployees
         Dim PositionLabel As System.Windows.Forms.Label
         Dim Date_HiredLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainAdminFormEmployees))
-        Me.Tbl_employeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Database3SADDataSet = New dtrs.Database3SADDataSet()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.EmployeesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PositionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,15 +51,6 @@ Partial Class MainAdminFormEmployees
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.Tbl_employeesBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Tbl_employeesDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.Tbl_positionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IDTextBox = New System.Windows.Forms.TextBox()
         Me.Full_NameTextBox = New System.Windows.Forms.TextBox()
         Me.AddressTextBox = New System.Windows.Forms.TextBox()
@@ -69,13 +58,23 @@ Partial Class MainAdminFormEmployees
         Me.GenderTextBox = New System.Windows.Forms.TextBox()
         Me.AgeTextBox = New System.Windows.Forms.TextBox()
         Me.Date_HiredDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ViewDTRButton = New System.Windows.Forms.Button()
+        Me.Tbl_employeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Database3SADDataSet = New dtrs.Database3SADDataSet()
+        Me.Tbl_positionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tbl_employeesTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_employeesTableAdapter()
         Me.TableAdapterManager = New dtrs.Database3SADDataSetTableAdapters.TableAdapterManager()
         Me.Tbl_positionsTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_positionsTableAdapter()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ViewDTRButton = New System.Windows.Forms.Button()
         Me.Tbl_salary_QueryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tbl_salary_QueryTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_salary_QueryTableAdapter()
         IDLabel = New System.Windows.Forms.Label()
         Full_NameLabel = New System.Windows.Forms.Label()
         AddressLabel = New System.Windows.Forms.Label()
@@ -84,12 +83,12 @@ Partial Class MainAdminFormEmployees
         AgeLabel = New System.Windows.Forms.Label()
         PositionLabel = New System.Windows.Forms.Label()
         Date_HiredLabel = New System.Windows.Forms.Label()
-        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.Tbl_employeesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tbl_employeesBindingNavigator.SuspendLayout()
         CType(Me.Tbl_employeesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_positionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_salary_QueryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -165,16 +164,6 @@ Partial Class MainAdminFormEmployees
         Date_HiredLabel.Size = New System.Drawing.Size(61, 13)
         Date_HiredLabel.TabIndex = 17
         Date_HiredLabel.Text = "Date Hired:"
-        '
-        'Tbl_employeesBindingSource
-        '
-        Me.Tbl_employeesBindingSource.DataMember = "tbl_employees"
-        Me.Tbl_employeesBindingSource.DataSource = Me.Database3SADDataSet
-        '
-        'Database3SADDataSet
-        '
-        Me.Database3SADDataSet.DataSetName = "Database3SADDataSet"
-        Me.Database3SADDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'MenuStrip1
         '
@@ -331,64 +320,6 @@ Partial Class MainAdminFormEmployees
         Me.Tbl_employeesDataGridView.Size = New System.Drawing.Size(496, 361)
         Me.Tbl_employeesDataGridView.TabIndex = 2
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Full_Name"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Full_Name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Address"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Address"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Phone"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Phone"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Gender"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Gender"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Age"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Age"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Position"
-        Me.DataGridViewTextBoxColumn7.DataSource = Me.Tbl_positionsBindingSource
-        Me.DataGridViewTextBoxColumn7.DisplayMember = "description"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Position"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.DataGridViewTextBoxColumn7.ValueMember = "description"
-        '
-        'Tbl_positionsBindingSource
-        '
-        Me.Tbl_positionsBindingSource.DataMember = "tbl_positions"
-        Me.Tbl_positionsBindingSource.DataSource = Me.Database3SADDataSet
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Date_Hired"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "Date_Hired"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        '
         'IDTextBox
         '
         Me.IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_employeesBindingSource, "ID", True))
@@ -445,24 +376,6 @@ Partial Class MainAdminFormEmployees
         Me.Date_HiredDateTimePicker.Size = New System.Drawing.Size(212, 20)
         Me.Date_HiredDateTimePicker.TabIndex = 18
         '
-        'Tbl_employeesTableAdapter
-        '
-        Me.Tbl_employeesTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tbl_adminsTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_employee_loginTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_employeesTableAdapter = Me.Tbl_employeesTableAdapter
-        Me.TableAdapterManager.tbl_positionsTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_salaryTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = dtrs.Database3SADDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'Tbl_positionsTableAdapter
-        '
-        Me.Tbl_positionsTableAdapter.ClearBeforeFill = True
-        '
         'ComboBox1
         '
         Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.Tbl_employeesBindingSource, "Position", True))
@@ -484,14 +397,96 @@ Partial Class MainAdminFormEmployees
         Me.ViewDTRButton.Text = "View DTR"
         Me.ViewDTRButton.UseVisualStyleBackColor = True
         '
+        'Tbl_employeesBindingSource
+        '
+        Me.Tbl_employeesBindingSource.DataMember = "tbl_employees"
+        Me.Tbl_employeesBindingSource.DataSource = Me.Database3SADDataSet
+        '
+        'Database3SADDataSet
+        '
+        Me.Database3SADDataSet.DataSetName = "Database3SADDataSet"
+        Me.Database3SADDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tbl_positionsBindingSource
+        '
+        Me.Tbl_positionsBindingSource.DataMember = "tbl_positions"
+        Me.Tbl_positionsBindingSource.DataSource = Me.Database3SADDataSet
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Full_Name"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Full_Name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Address"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Address"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Phone"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Phone"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Gender"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Gender"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Age"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Age"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Position"
+        Me.DataGridViewTextBoxColumn7.DataSource = Me.Tbl_positionsBindingSource
+        Me.DataGridViewTextBoxColumn7.DisplayMember = "description"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Position"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DataGridViewTextBoxColumn7.ValueMember = "description"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Date_Hired"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Date_Hired"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'Tbl_employeesTableAdapter
+        '
+        Me.Tbl_employeesTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tbl_adminsTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_employee_loginTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_employeesTableAdapter = Me.Tbl_employeesTableAdapter
+        Me.TableAdapterManager.tbl_positionsTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_salaryTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = dtrs.Database3SADDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Tbl_positionsTableAdapter
+        '
+        Me.Tbl_positionsTableAdapter.ClearBeforeFill = True
+        '
         'Tbl_salary_QueryBindingSource
         '
         Me.Tbl_salary_QueryBindingSource.DataMember = "tbl_salary Query"
         Me.Tbl_salary_QueryBindingSource.DataSource = Me.Database3SADDataSet
-        '
-        'Tbl_salary_QueryTableAdapter
-        '
-        Me.Tbl_salary_QueryTableAdapter.ClearBeforeFill = True
         '
         'MainAdminFormEmployees
         '
@@ -521,14 +516,14 @@ Partial Class MainAdminFormEmployees
         Me.Name = "MainAdminFormEmployees"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin - Daily Time Record Management System - Employees"
-        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.Tbl_employeesBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Tbl_employeesBindingNavigator.ResumeLayout(False)
         Me.Tbl_employeesBindingNavigator.PerformLayout()
         CType(Me.Tbl_employeesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_positionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_salary_QueryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -579,5 +574,4 @@ Partial Class MainAdminFormEmployees
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents ViewDTRButton As Button
     Friend WithEvents Tbl_salary_QueryBindingSource As BindingSource
-    Friend WithEvents Tbl_salary_QueryTableAdapter As Database3SADDataSetTableAdapters.tbl_salary_QueryTableAdapter
 End Class

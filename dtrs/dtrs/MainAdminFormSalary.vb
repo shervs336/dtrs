@@ -27,7 +27,7 @@ Public Class MainAdminFormSalary
         'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_salary_Query' table. You can move, or remove it, as needed.
         'Me.Tbl_salary_QueryTableAdapter.Fill(Me.Database3SADDataSet.tbl_salary_Query)
 
-        Access.ExecQuery("SELECT DISTINCT(Payroll_Period) From tbl_salary ORDER BY Payroll_Period Desc")
+        Access.ExecQuery("SELECT DISTINCT(Payroll_Period) From tbl_salary_query ORDER BY Payroll_Period Desc")
 
         If Access.RecordCount > 0 Then
             For Each R In Access.DBDT.Rows
