@@ -24,4 +24,9 @@
         Me.Hide()
         Me.Show()
     End Sub
+
+    Private Sub SalaryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalaryToolStripMenuItem.Click
+        Me.Hide()
+        MainAdminFormSalary.Show()
+    End Sub
 End Class

@@ -32,6 +32,8 @@ Partial Class MainAdminFormEmployees
         Dim PositionLabel As System.Windows.Forms.Label
         Dim Date_HiredLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainAdminFormEmployees))
+        Me.Tbl_employeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Database3SADDataSet = New dtrs.Database3SADDataSet()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.EmployeesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PositionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -39,8 +41,6 @@ Partial Class MainAdminFormEmployees
         Me.SalaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Tbl_employeesBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.Tbl_employeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Database3SADDataSet = New dtrs.Database3SADDataSet()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -74,6 +74,8 @@ Partial Class MainAdminFormEmployees
         Me.Tbl_positionsTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_positionsTableAdapter()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ViewDTRButton = New System.Windows.Forms.Button()
+        Me.Tbl_salary_QueryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tbl_salary_QueryTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_salary_QueryTableAdapter()
         IDLabel = New System.Windows.Forms.Label()
         Full_NameLabel = New System.Windows.Forms.Label()
         AddressLabel = New System.Windows.Forms.Label()
@@ -82,13 +84,14 @@ Partial Class MainAdminFormEmployees
         AgeLabel = New System.Windows.Forms.Label()
         PositionLabel = New System.Windows.Forms.Label()
         Date_HiredLabel = New System.Windows.Forms.Label()
+        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.Tbl_employeesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tbl_employeesBindingNavigator.SuspendLayout()
-        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_employeesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_positionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tbl_salary_QueryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IDLabel
@@ -163,6 +166,16 @@ Partial Class MainAdminFormEmployees
         Date_HiredLabel.TabIndex = 17
         Date_HiredLabel.Text = "Date Hired:"
         '
+        'Tbl_employeesBindingSource
+        '
+        Me.Tbl_employeesBindingSource.DataMember = "tbl_employees"
+        Me.Tbl_employeesBindingSource.DataSource = Me.Database3SADDataSet
+        '
+        'Database3SADDataSet
+        '
+        Me.Database3SADDataSet.DataSetName = "Database3SADDataSet"
+        Me.Database3SADDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeesToolStripMenuItem, Me.PositionsToolStripMenuItem, Me.AdminsToolStripMenuItem, Me.SalaryToolStripMenuItem})
@@ -222,16 +235,6 @@ Partial Class MainAdminFormEmployees
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'Tbl_employeesBindingSource
-        '
-        Me.Tbl_employeesBindingSource.DataMember = "tbl_employees"
-        Me.Tbl_employeesBindingSource.DataSource = Me.Database3SADDataSet
-        '
-        'Database3SADDataSet
-        '
-        Me.Database3SADDataSet.DataSetName = "Database3SADDataSet"
-        Me.Database3SADDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -481,11 +484,20 @@ Partial Class MainAdminFormEmployees
         Me.ViewDTRButton.Text = "View DTR"
         Me.ViewDTRButton.UseVisualStyleBackColor = True
         '
+        'Tbl_salary_QueryBindingSource
+        '
+        Me.Tbl_salary_QueryBindingSource.DataMember = "tbl_salary Query"
+        Me.Tbl_salary_QueryBindingSource.DataSource = Me.Database3SADDataSet
+        '
+        'Tbl_salary_QueryTableAdapter
+        '
+        Me.Tbl_salary_QueryTableAdapter.ClearBeforeFill = True
+        '
         'MainAdminFormEmployees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(824, 571)
+        Me.ClientSize = New System.Drawing.Size(824, 714)
         Me.Controls.Add(Me.ViewDTRButton)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(IDLabel)
@@ -509,15 +521,16 @@ Partial Class MainAdminFormEmployees
         Me.Name = "MainAdminFormEmployees"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin - Daily Time Record Management System - Employees"
+        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.Tbl_employeesBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Tbl_employeesBindingNavigator.ResumeLayout(False)
         Me.Tbl_employeesBindingNavigator.PerformLayout()
-        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_employeesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_positionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_salary_QueryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -565,4 +578,6 @@ Partial Class MainAdminFormEmployees
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents ViewDTRButton As Button
+    Friend WithEvents Tbl_salary_QueryBindingSource As BindingSource
+    Friend WithEvents Tbl_salary_QueryTableAdapter As Database3SADDataSetTableAdapters.tbl_salary_QueryTableAdapter
 End Class
