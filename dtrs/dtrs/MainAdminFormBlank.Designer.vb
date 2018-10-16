@@ -28,21 +28,22 @@ Partial Class MainAdminFormBlank
         Me.PositionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AdminsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.AdminNameLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Database3SADDataSet = New dtrs.Database3SADDataSet()
         Me.Tbl_employeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_employeesTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_employeesTableAdapter()
         Me.TableAdapterManager = New dtrs.Database3SADDataSetTableAdapters.TableAdapterManager()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.AdminNameLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.PayrollPeriodToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeesToolStripMenuItem, Me.PositionsToolStripMenuItem, Me.AdminsToolStripMenuItem, Me.SalaryToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeesToolStripMenuItem, Me.PositionsToolStripMenuItem, Me.AdminsToolStripMenuItem, Me.SalaryToolStripMenuItem, Me.PayrollPeriodToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(808, 24)
@@ -73,6 +74,20 @@ Partial Class MainAdminFormBlank
         Me.SalaryToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.SalaryToolStripMenuItem.Text = "Salary"
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdminNameLabel})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 436)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(808, 22)
+        Me.StatusStrip1.TabIndex = 1
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'AdminNameLabel
+        '
+        Me.AdminNameLabel.Name = "AdminNameLabel"
+        Me.AdminNameLabel.Size = New System.Drawing.Size(0, 17)
+        '
         'Database3SADDataSet
         '
         Me.Database3SADDataSet.DataSetName = "Database3SADDataSet"
@@ -93,23 +108,16 @@ Partial Class MainAdminFormBlank
         Me.TableAdapterManager.tbl_adminsTableAdapter = Nothing
         Me.TableAdapterManager.tbl_employee_loginTableAdapter = Nothing
         Me.TableAdapterManager.tbl_employeesTableAdapter = Me.Tbl_employeesTableAdapter
+        Me.TableAdapterManager.tbl_payroll_periodTableAdapter = Nothing
         Me.TableAdapterManager.tbl_positionsTableAdapter = Nothing
         Me.TableAdapterManager.tbl_salaryTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = dtrs.Database3SADDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'StatusStrip1
+        'PayrollPeriodToolStripMenuItem
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdminNameLabel})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 436)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(808, 22)
-        Me.StatusStrip1.TabIndex = 1
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'AdminNameLabel
-        '
-        Me.AdminNameLabel.Name = "AdminNameLabel"
-        Me.AdminNameLabel.Size = New System.Drawing.Size(0, 17)
+        Me.PayrollPeriodToolStripMenuItem.Name = "PayrollPeriodToolStripMenuItem"
+        Me.PayrollPeriodToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
+        Me.PayrollPeriodToolStripMenuItem.Text = "Payroll Period"
         '
         'MainAdminFormBlank
         '
@@ -124,10 +132,10 @@ Partial Class MainAdminFormBlank
         Me.Text = "Admin - Daily Time Record Management System"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_employeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -144,4 +152,5 @@ Partial Class MainAdminFormBlank
     Friend WithEvents SalaryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents AdminNameLabel As ToolStripStatusLabel
+    Friend WithEvents PayrollPeriodToolStripMenuItem As ToolStripMenuItem
 End Class

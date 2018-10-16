@@ -27,21 +27,22 @@ Partial Class MainAdminFormSalary
         Me.PositionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AdminsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Database3SADDataSet = New dtrs.Database3SADDataSet()
-        Me.TableAdapterManager = New dtrs.Database3SADDataSetTableAdapters.TableAdapterManager()
+        Me.PayrollPeriodToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Tbl_salary_QueryDataGridView = New System.Windows.Forms.DataGridView()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Database3SADDataSet = New dtrs.Database3SADDataSet()
+        Me.TableAdapterManager = New dtrs.Database3SADDataSetTableAdapters.TableAdapterManager()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_salary_QueryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeesToolStripMenuItem, Me.PositionsToolStripMenuItem, Me.AdminsToolStripMenuItem, Me.SalaryToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeesToolStripMenuItem, Me.PositionsToolStripMenuItem, Me.AdminsToolStripMenuItem, Me.SalaryToolStripMenuItem, Me.PayrollPeriodToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -72,21 +73,11 @@ Partial Class MainAdminFormSalary
         Me.SalaryToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.SalaryToolStripMenuItem.Text = "Salary"
         '
-        'Database3SADDataSet
+        'PayrollPeriodToolStripMenuItem
         '
-        Me.Database3SADDataSet.DataSetName = "Database3SADDataSet"
-        Me.Database3SADDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.tbl_adminsTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_employee_loginTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_employeesTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_positionsTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_salaryTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = dtrs.Database3SADDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.PayrollPeriodToolStripMenuItem.Name = "PayrollPeriodToolStripMenuItem"
+        Me.PayrollPeriodToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
+        Me.PayrollPeriodToolStripMenuItem.Text = "Payroll Period"
         '
         'Tbl_salary_QueryDataGridView
         '
@@ -125,12 +116,29 @@ Partial Class MainAdminFormSalary
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(699, 38)
+        Me.Button2.Location = New System.Drawing.Point(706, 37)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 8
         Me.Button2.Text = "Generate PDF"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Database3SADDataSet
+        '
+        Me.Database3SADDataSet.DataSetName = "Database3SADDataSet"
+        Me.Database3SADDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.tbl_adminsTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_employee_loginTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_employeesTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_payroll_periodTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_positionsTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_salaryTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = dtrs.Database3SADDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'MainAdminFormSalary
         '
@@ -147,8 +155,8 @@ Partial Class MainAdminFormSalary
         Me.Text = "Salary - Daily Time Record Management System - Admins"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_salary_QueryDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -166,4 +174,5 @@ Partial Class MainAdminFormSalary
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents PayrollPeriodToolStripMenuItem As ToolStripMenuItem
 End Class

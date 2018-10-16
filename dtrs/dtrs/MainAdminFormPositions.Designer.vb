@@ -50,6 +50,7 @@ Partial Class MainAdminFormPositions
         Me.Tbl_positionsDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.PayrollPeriodToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         DescriptionLabel = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,7 +71,7 @@ Partial Class MainAdminFormPositions
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeesToolStripMenuItem, Me.PositionsToolStripMenuItem, Me.AdminsToolStripMenuItem, Me.SalaryToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeesToolStripMenuItem, Me.PositionsToolStripMenuItem, Me.AdminsToolStripMenuItem, Me.SalaryToolStripMenuItem, Me.PayrollPeriodToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -121,6 +122,7 @@ Partial Class MainAdminFormPositions
         Me.TableAdapterManager.tbl_adminsTableAdapter = Nothing
         Me.TableAdapterManager.tbl_employee_loginTableAdapter = Nothing
         Me.TableAdapterManager.tbl_employeesTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_payroll_periodTableAdapter = Nothing
         Me.TableAdapterManager.tbl_positionsTableAdapter = Me.Tbl_positionsTableAdapter
         Me.TableAdapterManager.tbl_salaryTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = dtrs.Database3SADDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -261,6 +263,12 @@ Partial Class MainAdminFormPositions
         Me.DescriptionTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DescriptionTextBox.TabIndex = 4
         '
+        'PayrollPeriodToolStripMenuItem
+        '
+        Me.PayrollPeriodToolStripMenuItem.Name = "PayrollPeriodToolStripMenuItem"
+        Me.PayrollPeriodToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
+        Me.PayrollPeriodToolStripMenuItem.Text = "Payroll Period"
+        '
         'MainAdminFormPositions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -312,4 +320,5 @@ Partial Class MainAdminFormPositions
     Friend WithEvents Tbl_positionsDataGridView As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DescriptionTextBox As TextBox
+    Friend WithEvents PayrollPeriodToolStripMenuItem As ToolStripMenuItem
 End Class

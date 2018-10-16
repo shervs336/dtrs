@@ -27,11 +27,11 @@ Public Class MainAdminFormSalary
         'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_salary_Query' table. You can move, or remove it, as needed.
         'Me.Tbl_salary_QueryTableAdapter.Fill(Me.Database3SADDataSet.tbl_salary_Query)
 
-        Access.ExecQuery("SELECT DISTINCT(Payroll_Period) From tbl_salary_query ORDER BY Payroll_Period Desc")
+        Access.ExecQuery("SELECT * From tbl_payroll_period ORDER BY ID Desc")
 
         If Access.RecordCount > 0 Then
             For Each R In Access.DBDT.Rows
-                ComboBox1.Items.Add(R("Payroll_Period"))
+                ComboBox1.Items.Add(R("Start_Period") & " - " & R("End_Period"))
             Next
         End If
 
@@ -49,11 +49,18 @@ Public Class MainAdminFormSalary
 
         Dim PdfFile As New Document(PageSize.A4, 40, 40, 40, 20) ' set pdf page size
 
+        Dim PdfTitle As String = ComboBox1.Text
+        PdfTitle = PdfTitle.Replace("/", "_")
 
-        PdfFile.AddTitle("My Title") ' set our pdf title
+
+        PdfFile.AddTitle(PdfTitle) ' set our pdf title
 
 
-        Dim Write As PdfWriter = PdfWriter.GetInstance(PdfFile, New FileStream("Sample.pdf", FileMode.Create))
+        If Not Directory.Exists("export") Then
+            Directory.CreateDirectory("export")
+        End If
+
+        Dim Write As PdfWriter = PdfWriter.GetInstance(PdfFile, New FileStream("export\" & PdfTitle & ".pdf", FileMode.Create))
 
 
         PdfFile.Open()
@@ -62,16 +69,16 @@ Public Class MainAdminFormSalary
         ' declaration font type
 
 
-        Dim pTitle As New Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 14, iTextSharp.text.Font.BOLD, BaseColor.BLACK)
+        Dim pTitle As New Font(iTextSharp.text.Font.FontFamily.HELVETICA, 13, iTextSharp.text.Font.BOLD, BaseColor.BLACK)
 
 
-        Dim pTable As New Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 12, iTextSharp.text.Font.NORMAL, BaseColor.BLACK)
+        Dim pTable As New Font(iTextSharp.text.Font.FontFamily.HELVETICA, 10, iTextSharp.text.Font.NORMAL, BaseColor.BLACK)
 
 
         ' insert title into pdf file
 
 
-        Paragraph = New Paragraph(New Chunk("My Title", pTitle))
+        Paragraph = New Paragraph(New Chunk(PdfTitle, pTitle))
 
 
         Paragraph.Alignment = Element.ALIGN_CENTER
@@ -219,5 +226,10 @@ Public Class MainAdminFormSalary
 
         Tbl_salary_QueryDataGridView.Columns.Add("Total_Salary", "Total Salary")
 
+    End Sub
+
+    Private Sub PayrollPeriodToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PayrollPeriodToolStripMenuItem.Click
+        Me.Hide()
+        MainAdminFormPayroll.Show()
     End Sub
 End Class

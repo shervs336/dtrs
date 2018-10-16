@@ -1,23 +1,11 @@
-﻿Public Class MainAdminFormPositions
-    Private Sub Tbl_positionsBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles Tbl_positionsBindingNavigatorSaveItem.Click
-        Me.Validate()
-        Me.Tbl_positionsBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.Database3SADDataSet)
-
-    End Sub
-
-    Private Sub MainAdminFormPositions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_positions' table. You can move, or remove it, as needed.
-        Me.Tbl_positionsTableAdapter.Fill(Me.Database3SADDataSet.tbl_positions)
-
-    End Sub
+﻿Public Class MainAdminFormPayroll
     Private Sub EmployeesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeesToolStripMenuItem.Click
         Me.Hide()
         MainAdminFormEmployees.Show()
     End Sub
     Private Sub PositionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PositionsToolStripMenuItem.Click
         Me.Hide()
-        Me.Show()
+        MainAdminFormPositions.Show()
     End Sub
     Private Sub AdminsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminsToolStripMenuItem.Click
         Me.Hide()
@@ -31,6 +19,20 @@
 
     Private Sub PayrollPeriodToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PayrollPeriodToolStripMenuItem.Click
         Me.Hide()
-        MainAdminFormPayroll.Show()
+        Me.Show()
+
+    End Sub
+
+    Private Sub Tbl_payroll_periodBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles Tbl_payroll_periodBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.Tbl_payroll_periodBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Database3SADDataSet)
+
+    End Sub
+
+    Private Sub MainAdminFormPayroll_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_payroll_period' table. You can move, or remove it, as needed.
+        Me.Tbl_payroll_periodTableAdapter.Fill(Me.Database3SADDataSet.tbl_payroll_period)
+
     End Sub
 End Class

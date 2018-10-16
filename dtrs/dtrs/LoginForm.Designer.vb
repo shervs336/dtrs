@@ -36,43 +36,52 @@ Partial Class LoginForm
         'labelUsername
         '
         Me.labelUsername.AutoSize = True
-        Me.labelUsername.Location = New System.Drawing.Point(368, 135)
+        Me.labelUsername.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelUsername.Location = New System.Drawing.Point(416, 89)
         Me.labelUsername.Name = "labelUsername"
-        Me.labelUsername.Size = New System.Drawing.Size(55, 13)
+        Me.labelUsername.Size = New System.Drawing.Size(91, 23)
         Me.labelUsername.TabIndex = 0
         Me.labelUsername.Text = "Username"
         '
         'labelPassword
         '
         Me.labelPassword.AutoSize = True
-        Me.labelPassword.Location = New System.Drawing.Point(370, 188)
+        Me.labelPassword.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.labelPassword.Location = New System.Drawing.Point(416, 160)
         Me.labelPassword.Name = "labelPassword"
-        Me.labelPassword.Size = New System.Drawing.Size(53, 13)
+        Me.labelPassword.Size = New System.Drawing.Size(86, 23)
         Me.labelPassword.TabIndex = 1
         Me.labelPassword.Text = "Password"
         '
         'txtUsername
         '
         Me.txtUsername.AccessibleName = "username"
-        Me.txtUsername.Location = New System.Drawing.Point(442, 135)
+        Me.txtUsername.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.Location = New System.Drawing.Point(418, 115)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(305, 20)
+        Me.txtUsername.Size = New System.Drawing.Size(305, 27)
         Me.txtUsername.TabIndex = 2
         '
         'txtPassword
         '
         Me.txtPassword.AccessibleName = "password"
-        Me.txtPassword.Location = New System.Drawing.Point(442, 185)
+        Me.txtPassword.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.txtPassword.ForeColor = System.Drawing.Color.Black
+        Me.txtPassword.Location = New System.Drawing.Point(420, 195)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(305, 20)
+        Me.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtPassword.Size = New System.Drawing.Size(303, 27)
         Me.txtPassword.TabIndex = 3
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(442, 235)
+        Me.btnLogin.BackColor = System.Drawing.Color.Green
+        Me.btnLogin.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.Location = New System.Drawing.Point(438, 246)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(75, 23)
+        Me.btnLogin.Size = New System.Drawing.Size(89, 61)
         Me.btnLogin.TabIndex = 4
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = False
@@ -88,12 +97,15 @@ Partial Class LoginForm
         '
         'btnReturnToMainMenu
         '
-        Me.btnReturnToMainMenu.Location = New System.Drawing.Point(548, 235)
+        Me.btnReturnToMainMenu.BackColor = System.Drawing.Color.Red
+        Me.btnReturnToMainMenu.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReturnToMainMenu.ForeColor = System.Drawing.Color.White
+        Me.btnReturnToMainMenu.Location = New System.Drawing.Point(558, 246)
         Me.btnReturnToMainMenu.Name = "btnReturnToMainMenu"
-        Me.btnReturnToMainMenu.Size = New System.Drawing.Size(140, 23)
+        Me.btnReturnToMainMenu.Size = New System.Drawing.Size(140, 61)
         Me.btnReturnToMainMenu.TabIndex = 6
         Me.btnReturnToMainMenu.Text = "Return To Main Menu"
-        Me.btnReturnToMainMenu.UseVisualStyleBackColor = True
+        Me.btnReturnToMainMenu.UseVisualStyleBackColor = False
         '
         'LoginForm
         '

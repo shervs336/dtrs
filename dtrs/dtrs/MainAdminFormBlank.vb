@@ -20,4 +20,9 @@
         Me.Hide()
         MainAdminFormSalary.Show()
     End Sub
+
+    Private Sub PayrollPeriodToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PayrollPeriodToolStripMenuItem.Click
+        Me.Hide()
+        MainAdminFormPayroll.Show()
+    End Sub
 End Class

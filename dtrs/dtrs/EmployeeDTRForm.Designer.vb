@@ -94,7 +94,7 @@ Partial Class EmployeeDTRForm
         Me.LabelEmployeeName.AutoSize = True
         Me.LabelEmployeeName.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelEmployeeName.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.LabelEmployeeName.Location = New System.Drawing.Point(16, 218)
+        Me.LabelEmployeeName.Location = New System.Drawing.Point(11, 215)
         Me.LabelEmployeeName.Name = "LabelEmployeeName"
         Me.LabelEmployeeName.Size = New System.Drawing.Size(0, 29)
         Me.LabelEmployeeName.TabIndex = 7
