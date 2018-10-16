@@ -112,6 +112,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database3SADDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Database3SADDataSet.vb">
+      <DependentUpon>Database3SADDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeDTRForm.Designer.vb">
       <DependentUpon>EmployeeDTRForm.vb</DependentUpon>
     </Compile>

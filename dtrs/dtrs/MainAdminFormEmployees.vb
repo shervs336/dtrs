@@ -10,10 +10,21 @@
     End Sub
 
     Private Sub MainAdminFormEmployees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_employees' table. You can move, or remove it, as needed.
-        Me.Tbl_employeesTableAdapter.Fill(Me.Database3SADDataSet.tbl_employees)
         'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_positions' table. You can move, or remove it, as needed.
         Me.Tbl_positionsTableAdapter.Fill(Me.Database3SADDataSet.tbl_positions)
+        'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_employees' table. You can move, or remove it, as needed.
+        Me.Tbl_employeesTableAdapter.Fill(Me.Database3SADDataSet.tbl_employees)
+        'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_employees' table. You can move, or remove it, as needed.
+        Me.Tbl_employeesTableAdapter.Fill(Me.Database3SADDataSet.tbl_employees)
+        'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_employees' table. You can move, or remove it, as needed.
+        Me.Tbl_employeesTableAdapter.Fill(Me.Database3SADDataSet.tbl_employees)
+        'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_employees' table. You can move, or remove it, as needed.
+        Me.Tbl_employeesTableAdapter.Fill(Me.Database3SADDataSet.tbl_employees)
+        'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_employees' table. You can move, or remove it, as needed.
+        Me.Tbl_employeesTableAdapter.Fill(Me.Database3SADDataSet.tbl_employees)
+        'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_employees' table. You can move, or remove it, as needed.
+        Me.Tbl_employeesTableAdapter.Fill(Me.Database3SADDataSet.tbl_employees)
+        'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_employee_login' table. You can move, or remove it, as needed.
         'TODO: This line of code loads data into the 'Database3SADDataSet.tbl_employees' table. You can move, or remove it, as needed.
         Me.Tbl_employeesTableAdapter.Fill(Me.Database3SADDataSet.tbl_employees)
     End Sub
@@ -68,7 +79,19 @@
         MainAdminFormPayroll.Show()
     End Sub
 
-    Private Sub Tbl_employeesDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Tbl_employeesDataGridView.CellContentClick
+    Private Sub Tbl_employeesBindingNavigatorSaveItem_Click_1(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.Tbl_employeesBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Database3SADDataSet)
 
+
+    End Sub
+
+    Private Sub Tbl_employeesBindingNavigatorSaveItem_Click_2(sender As Object, e As EventArgs) Handles Tbl_employeesBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.Tbl_employeesBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Database3SADDataSet)
+
+   
     End Sub
 End Class

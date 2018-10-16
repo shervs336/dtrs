@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainAdminFormPositions
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainAdminFormPositions
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DescriptionLabel As System.Windows.Forms.Label
@@ -30,44 +30,35 @@ Partial Class MainAdminFormPositions
         Me.PositionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AdminsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PayrollPeriodToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Database3SADDataSet = New dtrs.Database3SADDataSet()
-        Me.Tbl_positionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tbl_positionsTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_positionsTableAdapter()
+        Me.Tbl_positionsDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
         Me.TableAdapterManager = New dtrs.Database3SADDataSetTableAdapters.TableAdapterManager()
-        Me.Tbl_positionsBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.Tbl_positionsTableAdapter = New dtrs.Database3SADDataSetTableAdapters.tbl_positionsTableAdapter()
+        Me.Tbl_positionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.Tbl_positionsBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.Tbl_positionsDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
-        Me.PayrollPeriodToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Tbl_positionsBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         DescriptionLabel = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tbl_positionsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_positionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_positionsBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tbl_positionsBindingNavigator.SuspendLayout()
-        CType(Me.Tbl_positionsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DescriptionLabel
-        '
-        DescriptionLabel.AutoSize = True
-        DescriptionLabel.Location = New System.Drawing.Point(12, 67)
-        DescriptionLabel.Name = "DescriptionLabel"
-        DescriptionLabel.Size = New System.Drawing.Size(61, 13)
-        DescriptionLabel.TabIndex = 3
-        DescriptionLabel.Text = "description:"
         '
         'MenuStrip1
         '
@@ -102,19 +93,41 @@ Partial Class MainAdminFormPositions
         Me.SalaryToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.SalaryToolStripMenuItem.Text = "Salary"
         '
+        'PayrollPeriodToolStripMenuItem
+        '
+        Me.PayrollPeriodToolStripMenuItem.Name = "PayrollPeriodToolStripMenuItem"
+        Me.PayrollPeriodToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
+        Me.PayrollPeriodToolStripMenuItem.Text = "Payroll Period"
+        '
         'Database3SADDataSet
         '
         Me.Database3SADDataSet.DataSetName = "Database3SADDataSet"
         Me.Database3SADDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Tbl_positionsBindingSource
+        'Tbl_positionsDataGridView
         '
-        Me.Tbl_positionsBindingSource.DataMember = "tbl_positions"
-        Me.Tbl_positionsBindingSource.DataSource = Me.Database3SADDataSet
+        Me.Tbl_positionsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Tbl_positionsDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1})
+        Me.Tbl_positionsDataGridView.Location = New System.Drawing.Point(12, 100)
+        Me.Tbl_positionsDataGridView.Name = "Tbl_positionsDataGridView"
+        Me.Tbl_positionsDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.Tbl_positionsDataGridView.TabIndex = 3
         '
-        'Tbl_positionsTableAdapter
+        'DescriptionTextBox
         '
-        Me.Tbl_positionsTableAdapter.ClearBeforeFill = True
+        Me.DescriptionTextBox.Location = New System.Drawing.Point(79, 64)
+        Me.DescriptionTextBox.Name = "DescriptionTextBox"
+        Me.DescriptionTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.DescriptionTextBox.TabIndex = 4
+        '
+        'DescriptionLabel
+        '
+        DescriptionLabel.AutoSize = True
+        DescriptionLabel.Location = New System.Drawing.Point(12, 67)
+        DescriptionLabel.Name = "DescriptionLabel"
+        DescriptionLabel.Size = New System.Drawing.Size(61, 13)
+        DescriptionLabel.TabIndex = 3
+        DescriptionLabel.Text = "description:"
         '
         'TableAdapterManager
         '
@@ -127,48 +140,20 @@ Partial Class MainAdminFormPositions
         Me.TableAdapterManager.tbl_salaryTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = dtrs.Database3SADDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'Tbl_positionsBindingNavigator
+        'Tbl_positionsTableAdapter
         '
-        Me.Tbl_positionsBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.Tbl_positionsBindingNavigator.BindingSource = Me.Tbl_positionsBindingSource
-        Me.Tbl_positionsBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.Tbl_positionsBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.Tbl_positionsBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.Tbl_positionsBindingNavigatorSaveItem})
-        Me.Tbl_positionsBindingNavigator.Location = New System.Drawing.Point(0, 24)
-        Me.Tbl_positionsBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.Tbl_positionsBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.Tbl_positionsBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.Tbl_positionsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.Tbl_positionsBindingNavigator.Name = "Tbl_positionsBindingNavigator"
-        Me.Tbl_positionsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Tbl_positionsBindingNavigator.Size = New System.Drawing.Size(800, 25)
-        Me.Tbl_positionsBindingNavigator.TabIndex = 3
-        Me.Tbl_positionsBindingNavigator.Text = "BindingNavigator1"
+        Me.Tbl_positionsTableAdapter.ClearBeforeFill = True
         '
-        'BindingNavigatorAddNewItem
+        'Tbl_positionsBindingSource
         '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        Me.Tbl_positionsBindingSource.DataMember = "tbl_positions"
+        Me.Tbl_positionsBindingSource.DataSource = Me.Database3SADDataSet
         '
-        'BindingNavigatorCountItem
+        'DataGridViewTextBoxColumn1
         '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "description"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "description"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -202,6 +187,13 @@ Partial Class MainAdminFormPositions
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
@@ -230,6 +222,24 @@ Partial Class MainAdminFormPositions
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'Tbl_positionsBindingNavigatorSaveItem
         '
         Me.Tbl_positionsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -238,36 +248,23 @@ Partial Class MainAdminFormPositions
         Me.Tbl_positionsBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.Tbl_positionsBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'Tbl_positionsDataGridView
+        'Tbl_positionsBindingNavigator
         '
-        Me.Tbl_positionsDataGridView.AutoGenerateColumns = False
-        Me.Tbl_positionsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Tbl_positionsDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1})
-        Me.Tbl_positionsDataGridView.DataSource = Me.Tbl_positionsBindingSource
-        Me.Tbl_positionsDataGridView.Location = New System.Drawing.Point(12, 100)
-        Me.Tbl_positionsDataGridView.Name = "Tbl_positionsDataGridView"
-        Me.Tbl_positionsDataGridView.Size = New System.Drawing.Size(300, 220)
-        Me.Tbl_positionsDataGridView.TabIndex = 3
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "description"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "description"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DescriptionTextBox
-        '
-        Me.DescriptionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_positionsBindingSource, "description", True))
-        Me.DescriptionTextBox.Location = New System.Drawing.Point(79, 64)
-        Me.DescriptionTextBox.Name = "DescriptionTextBox"
-        Me.DescriptionTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.DescriptionTextBox.TabIndex = 4
-        '
-        'PayrollPeriodToolStripMenuItem
-        '
-        Me.PayrollPeriodToolStripMenuItem.Name = "PayrollPeriodToolStripMenuItem"
-        Me.PayrollPeriodToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
-        Me.PayrollPeriodToolStripMenuItem.Text = "Payroll Period"
+        Me.Tbl_positionsBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.Tbl_positionsBindingNavigator.BindingSource = Me.Tbl_positionsBindingSource
+        Me.Tbl_positionsBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.Tbl_positionsBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.Tbl_positionsBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.Tbl_positionsBindingNavigatorSaveItem})
+        Me.Tbl_positionsBindingNavigator.Location = New System.Drawing.Point(0, 24)
+        Me.Tbl_positionsBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.Tbl_positionsBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.Tbl_positionsBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.Tbl_positionsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.Tbl_positionsBindingNavigator.Name = "Tbl_positionsBindingNavigator"
+        Me.Tbl_positionsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.Tbl_positionsBindingNavigator.Size = New System.Drawing.Size(800, 25)
+        Me.Tbl_positionsBindingNavigator.TabIndex = 3
+        Me.Tbl_positionsBindingNavigator.Text = "BindingNavigator1"
         '
         'MainAdminFormPositions
         '
@@ -285,11 +282,11 @@ Partial Class MainAdminFormPositions
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.Database3SADDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_positionsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_positionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_positionsBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Tbl_positionsBindingNavigator.ResumeLayout(False)
         Me.Tbl_positionsBindingNavigator.PerformLayout()
-        CType(Me.Tbl_positionsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -301,24 +298,24 @@ Partial Class MainAdminFormPositions
     Friend WithEvents AdminsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalaryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Database3SADDataSet As Database3SADDataSet
-    Friend WithEvents Tbl_positionsBindingSource As BindingSource
-    Friend WithEvents Tbl_positionsTableAdapter As Database3SADDataSetTableAdapters.tbl_positionsTableAdapter
+    Friend WithEvents PayrollPeriodToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Tbl_positionsDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DescriptionTextBox As TextBox
     Friend WithEvents TableAdapterManager As Database3SADDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents Tbl_positionsBindingNavigator As BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
+    Friend WithEvents Tbl_positionsTableAdapter As Database3SADDataSetTableAdapters.tbl_positionsTableAdapter
+    Friend WithEvents Tbl_positionsBindingSource As BindingSource
     Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
     Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
     Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
+    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
     Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
     Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
+    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
+    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
     Friend WithEvents Tbl_positionsBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents Tbl_positionsDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DescriptionTextBox As TextBox
-    Friend WithEvents PayrollPeriodToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Tbl_positionsBindingNavigator As BindingNavigator
 End Class
